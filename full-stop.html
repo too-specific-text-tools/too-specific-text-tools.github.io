@@ -1,9 +1,17 @@
 ﻿<!doctype html>
-<html amp lang="en">
+<html ⚡ lang="en">
+    <!--
+    TODO:
+    * canonical link
+    * google analytics
+    -->
     <head>
         <meta charset="utf-8">
+        <meta name="description" content="Adds one or more full stops at the end of each line of text">
+        <meta name="keywords" content="Full Stop, End Of Line, Period, Text, Copy, Paste, Clipboard, Online, Automatically, Automatic, Instant, Instantly, Web, Tool, App, Javascript, Free, Microsoft Word, Text Editor, Editing, Regex, Regular Expressions, Programming, Software, Find, Replace, Find And Replace">
+        <meta name="author" content="Benjamin Glitsos">
         <script async src="https://cdn.ampproject.org/v0.js"></script>
-        <link rel="canonical" href="hello-world.html">
+        <link rel="canonical" href="">
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
 
@@ -17,7 +25,7 @@
                 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             }
 
-            .body {
+            .centered-body {
                 max-width: 800px;
                 margin: 0 auto;
                 margin-top: 25px;
@@ -45,7 +53,7 @@
 
             a:hover {
                 color: hotpink;
-                background: LightGreen;
+                background: Yellow;
             }
 
             a:active {
@@ -67,7 +75,7 @@
 
             button:hover {
                 background: MediumTurquoise;
-                border-color: Fuchsia;
+                border-color: Yellow;
             }
 
             button:active {
@@ -84,8 +92,12 @@
                 height: 100px;
             }
 
-            textarea :hover {
-                border-color: Chartreuse ;
+            .textarea-overflow-fix {
+                padding-right: 6px;
+            }
+
+            textarea:hover {
+                border-color: Chartreuse;
             }
 
             #copied-popup {
@@ -95,6 +107,11 @@
                 vertical-align: middle;
                 line-height: 30px;
                 border-radius: 8px;
+                display: table;
+                box-sizing: border-box;
+                padding-left: 8px;
+                padding-right: 8px;
+                margin: 0 auto;
             }
 
             .invisible {
@@ -142,16 +159,14 @@
         </script>
     </head>
     <body>
-        <div class="body">
-            <h1><a href="">Specific</a></h1>
+        <div class="centered-body">
+            <h1><a href="">Specific Soup</a></h1>
             <h2>Add A Full Stop (.) To The End Of Each Line</h2>
-            <form>
-                <textarea id="ioArea"></textarea>
-                <div>
-                    <button type="submit" id="DoIt" onClick="Do(event)">do it</button>
-                </div>
+            <form onsubmit="Do()">
+                <div class="textarea-overflow-fix"><textarea id="ioArea"></textarea></div>
+                <button type="submit" id="DoIt">do it</button>
             </form>
-            <div id="copied-popup" class="invisible">Copied to clipboard</div>
+            <div id="copied-popup" class="invisible">Copied to clipboard :O</div>
             <div class="ads">
                 <amp-ad width="250"
                     height="250"
@@ -178,3 +193,5 @@
         </div>
     </body>
 </html>
+
+<!-- Benjamin Glitsos © 2018 -->
