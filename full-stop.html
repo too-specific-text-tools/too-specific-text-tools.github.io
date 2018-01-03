@@ -8,15 +8,15 @@ TODO:
         <meta charset="UTF-8">
         <title></title>
         <script type="text/javascript">
-            function Upperise() {
-                document.getElementById("toupper").value = document.getElementById("toupper").value.toUpperCase();
+            function Specific() {
+                document.getElementById("io").value = document.getElementById("io").value.replace(/and/g, "NOT");
                 event.preventDefault(); //Prevents from clearing after submit
             }
         </script>
     </head>
     <body>
-        <form onSubmit="Upperise(event)">
-            <textarea rows="4" cols="50" id="toupper">Test: this and that and this not that</textarea>
+        <form onSubmit="Specific(event)">
+            <textarea rows="4" cols="50" id="io">Test: this and that and this not that</textarea>
             <input type="submit">
         </form>
     </body>
