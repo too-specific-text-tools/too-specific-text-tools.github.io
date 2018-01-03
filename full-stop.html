@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html ⚡ lang="en">
+<html lang="en">
     <!--
     TODO:
     * google analytics
@@ -9,185 +9,30 @@
         <meta name="description" content="Adds one or more full stops at the end of each line of text">
         <meta name="keywords" content="Full Stop, End Of Line, Period, Text, Copy, Paste, Clipboard, Online, Automatically, Automatic, Instant, Instantly, Web, Tool, App, Javascript, Free, Microsoft Word, Text Editor, Editing, Regex, Regular Expressions, Programming, Software, Find, Replace, Find And Replace">
         <meta name="author" content="Benjamin Glitsos">
-        <script async src="https://cdn.ampproject.org/v0.js"></script>
-        <link rel="canonical" href="">
-        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-        <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
-
-            * {
-                margin-top: 7.5px;
-                margin-bottom: 7.5px;
-            }
-
-            body {
-                font-size: 15px;
-                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            }
-
-            .centered-body {
-                max-width: 800px;
-                margin: 0 auto;
-                margin-top: 25px;
-            }
-
-            h1, h2 {
-                font-weight: normal;
-            }
-
-            h1 {
-                font-size: 22px;
-            }
-
-            h2 {
-                font-size: 15px;
-            }
-
-            a:link {
-                color: MediumSlateBlue;
-            }
-
-            a:visited {
-                color: green;
-            }
-
-            a:hover {
-                color: Tomato;
-                background: PowderBlue;
-            }
-
-            a:active {
-                color: blue;
-                background: LightCoral;
-            }
-
-            button {
-                font-size: 24px;
-                font-weight: bold;
-                color: MediumOrchid;
-                border: 2px solid MediumOrchid;
-                background: none;
-                padding: 12px;
-                border-style: solid;
-                border-radius: 12px;
-                cursor: pointer;
-            }
-
-            button:hover {
-                background: MediumTurquoise;
-                border-color: Yellow;
-            }
-
-            button:active {
-                background: Yellow;
-                color: red;
-            }
-
-            textarea, button {
-                display: block;
-                width: 100%;
-            }
-
-            textarea {
-                height: 100px;
-            }
-
-            .textarea-overflow-fix {
-                padding-right: 6px;
-            }
-
-            textarea:hover {
-                border-color: Chartreuse;
-            }
-
-            #copied-popup {
-                background-color: LightGray;
-                height: 30px;
-                text-align: center;
-                vertical-align: middle;
-                line-height: 30px;
-                border-radius: 8px;
-                display: table;
-                box-sizing: border-box;
-                padding-left: 8px;
-                padding-right: 8px;
-                margin: 0 auto;
-            }
-
-            .invisible {
-                opacity:0;
-            }
-
-            .fade-in {
-                opacity:1;
-                transition: opacity 0.3s;
-            }
-
-            .ads {
-                display: inline;
-            }
-
-        </style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-        <title>Add A Full Stop (.) To The End Of Each Line Automatically Online</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="tools.css" type="text/css">
         <script type="text/javascript">
-            var regEnd = /$/gm;
-                    var regChar = "."
-
-                    function Do() {
-                        var io = document.getElementById("ioArea");
-                        // Regex:
-                        io.value = io.value.replace(regEnd, regChar);
-                        // Copy to clipboard:
-                        io.select();
-                        document.execCommand("Copy");
-                        // Clear selection:
-                        if ( document.selection ) {
-                            document.selection.empty();
-                        } else if ( window.getSelection ) {
-                            window.getSelection().removeAllRanges();
-                        }
-                        // Display 'copied' popup:
-                        document.getElementById("copied-popup").classList.remove('invisible');
-                        document.getElementById("copied-popup").classList.add('fade-in');
-                        // Append another 'do it'
-                        document.getElementById('DoIt').innerHTML += " do it";
-                        // Prevent from clearing after submit:
-                        event.preventDefault();
-                        // Prevent page reload on some browsers:
-                        return false;
-                    }
+        var regEnd = /$/gm;
+        var regChar = ".";
         </script>
+        <script src="add-to-end.js"></script>
+        <title>Add A Full Stop (.) To The End Of Each Line Automatically Online</title>
     </head>
     <body>
         <div class="centered-body">
-            <h1><a href="">Too Specific Tools</a></h1>
+            <header>
+                <a href="">
+                <h1>Too Specific</h1>
+                <p class="logo-subheading">Text Tools</p>
+                </a>
+            </header>
             <h2>Add A Full Stop (.) To The End Of Each Line</h2>
             <form onsubmit="Do()">
                 <div class="textarea-overflow-fix"><textarea id="ioArea"></textarea></div>
                 <button type="submit" id="DoIt">do it</button>
             </form>
             <div id="copied-popup" class="invisible">Copied to clipboard  ԅ༼ ◕ ڡ ◕ ༽ง </div>
-            <div class="ads">
-                <amp-ad width="250"
-                    height="250"
-                    type="a9"
-                    data-aax_size="250x250"
-                    data-aax_pubname="test123"
-                    data-aax_src="302">
-                </amp-ad>
-                <amp-ad width="250"
-                    height="250"
-                    type="a9"
-                    data-aax_size="250x250"
-                    data-aax_pubname="test123"
-                    data-aax_src="302">
-                </amp-ad>
-                <amp-ad width="250"
-                    height="250"
-                    type="a9"
-                    data-aax_size="250x250"
-                    data-aax_pubname="test123"
-                    data-aax_src="302">
-                </amp-ad>
+            <!-- ads -->
             </div>
         </div>
     </body>
