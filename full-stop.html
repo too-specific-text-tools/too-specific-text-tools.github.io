@@ -8,15 +8,11 @@ TODO:
         <meta charset="UTF-8">
         <title></title>
         <script type="text/javascript">
-        function upperise() {
-            this.toupper.value = this.toupper.value.toUpperCase();
-            return false;
-        }
         </script>
     </head>
     <body>
-        <form onSubmit="return upperise()">
-            <input type="text" name="toupper">
+        <form onSubmit="this.toupper.value = this.toupper.value.toUpperCase(); return false;">
+            <textarea rows="4" cols="50" name="toupper"></textarea>
             <input type="submit">
         </form>
     </body>
