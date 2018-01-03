@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html amp lang="en">
     <head>
         <meta charset="utf-8">
@@ -13,7 +13,7 @@
             }
 
             #copied-popup {
-                background-color: rgba(0, 0, 0, 0.2);
+                background-color: LightGray;
             }
 
             .invisible {
@@ -22,17 +22,41 @@
 
             .fade-in {
                 opacity:1;
-                transition: opacity 0.2s;
+                transition: opacity 0.3s;
             }
 
+            body {
+                font-size: 15px;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                line-height: 1.5;
+                margin: 152px 50px 50px 300px;
+                padding: 0;
+                max-width: 500px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 15px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+
+            @media (max-width: 979px) {body { margin-left: 25px; } }
+            @media (max-height: 500px) {body { margin-top: 25px; } }
+
         </style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-        <title>Add Full Stop (.) After Each Line Automatically Online</title>
+        <title>Add Full Stop (.) At The End Of Each Line Automatically Online</title>
         <script type="text/javascript">
             var regEnd = /$/gm;
 var regChar = "."
+
 function Do() {
     var io = document.getElementById("ioArea");
-    var undosave = io
     // Regex:
     io.value = io.value.replace(regEnd, regChar);
     // Copy to clipboard:
@@ -44,9 +68,11 @@ function Do() {
     } else if ( window.getSelection ) {
         window.getSelection().removeAllRanges();
     }
-    // Display ‘copied’ popup:
+    // Display 'copied' popup:
     document.getElementById("copied-popup").classList.remove('invisible');
     document.getElementById("copied-popup").classList.add('fade-in');
+    // Append another 'do it'
+    document.getElementById('DoIt').innerHTML += " do it";
     // Prevent from clearing after submit:
     event.preventDefault();
 }
@@ -54,11 +80,11 @@ function Do() {
     </head>
     <body>
         <h1>Specific</h1>
-        <h2>Add Full Stop (.) After Each Line</h2>
+        <h2>Add Full Stop (.) At The End Of Each Line</h2>
         <form onSubmit="Do(event)">
             <textarea rows="4" cols="50" id="ioArea"></textarea>
             <div>
-                <button type="submit">Do it</button>
+                <button type="submit" id="DoIt">do it</button>
             </div>
         </form>
         <span id="copied-popup" class="invisible">Copied to clipboard</span>
