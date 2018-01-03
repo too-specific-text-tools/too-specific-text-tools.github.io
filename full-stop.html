@@ -18,7 +18,6 @@
 var regChar = "."
 function Do() {
     var io = document.getElementById("ioArea");
-    var undosave = io
     // Regex:
     io.value = io.value.replace(regEnd, regChar);
     // Copy to clipboard:
@@ -30,12 +29,6 @@ function Do() {
     } else if ( window.getSelection ) {
         window.getSelection().removeAllRanges();
     }
-    // Prevent from clearing after submit:
-    event.preventDefault();
-}
-
-function Undo () {
-    document.getElementById("ioArea").value = undosave.value
     // Prevent from clearing after submit:
     event.preventDefault();
 }
