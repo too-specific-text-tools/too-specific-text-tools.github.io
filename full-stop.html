@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-TODO:
-* 
--->
     <head>
         <meta charset="UTF-8">
         <title></title>
         <script type="text/javascript">
             function Specific() {
-                document.getElementById("io").value = document.getElementById("io").value.replace(/and/g, "NOT");
+                document.getElementById("io").value = document.getElementById("io").value.replace(/$/gm, ".");
                 event.preventDefault(); //Prevents from clearing after submit
             }
         </script>
     </head>
     <body>
         <form onSubmit="Specific(event)">
-            <textarea rows="4" cols="50" id="io">Test: this and that and this not that</textarea>
+            <textarea rows="4" cols="50" id="io">Test: this and that and this not that
+                and this not or
+                either or both.</textarea>
             <input type="submit">
         </form>
     </body>
