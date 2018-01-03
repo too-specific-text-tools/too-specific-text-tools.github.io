@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+TODO:
+* 
+-->
     <head>
         <meta charset="UTF-8">
         <title></title>
-        <script type="text/javascript"></script>
+        <script type="text/javascript">
+        function upperise() {
+            this.toupper.value = this.toupper.value.toUpperCase();
+            return false;
+        }
+        </script>
     </head>
     <body>
-        <form onSubmit="this.value=this.value.replace(the, and)">
-            <input type="text">
+        <form onSubmit="return upperise()">
+            <input type="text" name="toupper">
             <input type="submit">
         </form>
     </body>
