@@ -21,3 +21,5 @@ function Do() {
     // Prevent page reload on some browsers:
     return false;
 }
+
+// Benjamin Glitsos © 2018

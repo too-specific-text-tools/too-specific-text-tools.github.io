@@ -43,7 +43,7 @@ a:link {
 }
 
 a:visited {
-    color: green;
+    color: blue;
 }
 
 a:hover {
@@ -52,7 +52,7 @@ a:hover {
 }
 
 a:active {
-    color: blue;
+    color: green;
     background: LightCoral;
 }
 
@@ -117,3 +117,5 @@ textarea:hover {
     opacity:1;
     transition: opacity 0.3s;
 }
+
+/* Benjamin Glitsos © 2018 */
