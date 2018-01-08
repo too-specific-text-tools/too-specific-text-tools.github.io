@@ -1,0 +1,6 @@
+* google site search
+* page hierarchy
+* remove amp
+* make [±] tree foldable
+* get random colors working
+* make 'text tools' on 2 lines

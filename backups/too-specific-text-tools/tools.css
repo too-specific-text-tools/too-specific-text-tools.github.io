@@ -1,0 +1,121 @@
+* {
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.centered-body {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+.logo-subheading {
+    font-size: 11px;
+}
+
+header {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: MediumSlateBlue;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: Tomato;
+    background: PowderBlue;
+}
+
+a:active {
+    color: blue;
+    background: LightCoral;
+}
+
+button {
+    font-size: 24px;
+    font-weight: bold;
+    color: MediumOrchid;
+    border: 2px solid MediumOrchid;
+    background: none;
+    padding: 12px;
+    border-style: solid;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: MediumTurquoise;
+    border-color: Yellow;
+}
+
+button:active {
+    background: Yellow;
+    color: red;
+}
+
+textarea, button {
+    display: block;
+    width: 100%;
+}
+
+textarea {
+    height: 100px;
+}
+
+.textarea-overflow-fix {
+    padding-right: 6px;
+}
+
+textarea:hover {
+    border-color: Chartreuse;
+}
+
+#copied-popup {
+    background-color: LightGray;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    border-radius: 8px;
+    display: table;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0 auto;
+}
+
+.invisible {
+    opacity:0;
+}
+
+.fade-in {
+    opacity:1;
+    transition: opacity 0.3s;
+}
+
+/* Benjamin Glitsos © 2018 */

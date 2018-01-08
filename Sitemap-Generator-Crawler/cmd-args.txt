@@ -1,0 +1,3 @@
+"C:\Users\bengyup\xampp\xampp_shell.bat"
+cd "C:\Users\bengyup\Box Sync\Personal-websites\too-specific-text-tools\Sitemap-Generator-Crawler"
+php sitemap.php
