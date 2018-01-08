@@ -31,8 +31,8 @@ $userVars = array(
 // Page Types =========================
 
 $linePos = array(
-    "start-of-line" => array("pos" => "start", "regVar" => "/" . "\$" . "/" . "gm;" . "\n"),
-    "end-of-line"   => array("pos" => "end",   "regVar" => "/" . "^" . "/" . "gm;" . "\n"),
+    "start-of-line" => array("pos" => "start", "regVar" => "/" . "^" . "/" . "gm;"),
+    "end-of-line"   => array("pos" => "end",   "regVar" => "/" . "\$" . "/" . "gm;"),
 );
 
 // Index variables =========================
@@ -154,7 +154,7 @@ foreach($userVars as $u_key => $u_value) {
         $Name        = ucwords($name);
         $names       = $name . "s";
         $NameChar    = $Name . " (" . htmlspecialchars($char) . ")";
-        if (preg_match('/^[aeiou]/i', $NameChar)) {$NameChar = "n " . $NameChar;}
+        if (preg_match('/^[aeiou]/i', $NameChar)) {$NameChar = "n " . $NameChar;} else {$NameChar = " " . $NameChar;}
 
         $pageNameDir = "add/" . $l_key . "/all/" . str_replace( " ", "-", $name) . ".html";
 
@@ -186,13 +186,13 @@ $styles
 var regPos  = $regPos
 var regChar = $regChar
 </script>
-<script src="$domain/add/end-of-line/all/add-to-end.js"></script>
-<title>Add A $NameChar To The $i_Name Of Each Line Automatically Online - $brandName</title>
+<script src="$domain/add/add.js"></script>
+<title>Add A$NameChar To The $i_Name Of Each Line Automatically Online - $brandName</title>
 </head>
 <body>
 <div class="centered-body">
 $logo
-<h2>Add A $NameChar To The $i_Name Of Each Line</h2>
+<h2>Add A$NameChar To The $i_Name Of Each Line</h2>
 <form onsubmit="Do()">
 <div class="textarea-overflow-fix"><textarea id="ioArea"></textarea></div>
 <button type="submit" id="DoIt">do it</button>
