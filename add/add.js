@@ -1,7 +1,7 @@
 function Do() {
     var io = document.getElementById("ioArea");
     // Regex:
-    io.value = io.value.replace(regEnd, regChar);
+    io.value = io.value.replace(regPos, regChar);
     // Copy to clipboard:
     io.select();
     document.execCommand("Copy");

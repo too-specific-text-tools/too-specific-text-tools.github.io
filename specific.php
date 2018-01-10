@@ -44,7 +44,7 @@ foreach($linePos as $l_key => $l_value) {
 
 $index_description = "text editing tools that do exactly the thing that you want";
 $Index_description = ucfirst($index_description);
-$i_name            = $linePos[$l_key]["regVar"];
+$i_name            = $linePos[$l_key]["pos"];
 $i_Name            = ucwords($i_name);
 
 // Normalise line endings to UNIX format =========================
@@ -120,6 +120,20 @@ $gtags = <<<GTAGS
 </script>
 GTAGS;
 
+$adsense = <<<ADSENSE
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: "ca-pub-5491238978029001",
+  enable_page_level_ads: true
+});
+</script>
+ADSENSE;
+
+$ads = <<<ADS
+<!-- ads -->
+ADS;
+
 $meta = <<<META
 <meta charset="utf-8">
 <meta name="author" content="Benjamin Glitsos">
@@ -133,6 +147,14 @@ STYLES;
 $logo = <<<LOGO
 <h1><a href="$domain">Too Specific <span class="logo-subheading">Text Tools</span></a></h1>
 LOGO;
+
+$form = <<<FORM
+<form onsubmit="Do()">
+<div class="textarea-overflow-fix"><textarea id="ioArea"></textarea></div>
+<button type="submit" id="DoIt">do it</button>
+</form>
+<div id="copied-popup" class="invisible">Copied to clipboard &nbsp;$donger </div>
+FORM;
 
 $home_link = <<<HOME
 <a href="$domain">&#171; Home</a>
@@ -171,13 +193,6 @@ $pageString = <<<PAGE
 $declarations
 <head>
 $gtags
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "ca-pub-5491238978029001",
-enable_page_level_ads: true
-});
-</script>
 <meta name="description" content="Adds one or more $names at the $i_name of each line of text">
 $meta
 <meta name="keywords" content=$metastring>
@@ -193,12 +208,7 @@ var regChar = $regChar
 <div class="centered-body">
 $logo
 <h2>Add A$NameChar To The $i_Name Of Each Line</h2>
-<form onsubmit="Do()">
-<div class="textarea-overflow-fix"><textarea id="ioArea"></textarea></div>
-<button type="submit" id="DoIt">do it</button>
-</form>
-<div id="copied-popup" class="invisible">Copied to clipboard &nbsp;$donger </div>
-<!-- ads -->
+$form
 $home_link
 </div>
 </body>
