@@ -59,7 +59,6 @@ function normalise($s) {
 }
 // Dongers =========================
 $dongers = array("ԅ༼ ◕ ڡ ◕ ༽ง", "\\(◕ ◡ ◕\\)");
-$donger = $dongers[array_rand($dongers)];
 
 // Copyright =========================
 $copy_date = html_entity_decode("&copy;", ENT_COMPAT, 'UTF-8') . " " . date("Y");
@@ -151,7 +150,6 @@ $form = <<<FORM
 <div class="textarea-overflow-fix"><textarea id="ioArea"></textarea></div>
 <button type="submit" id="DoIt">do it</button>
 </form>
-<div id="copied-popup" class="invisible">Copied to clipboard &nbsp;$donger </div>
 FORM;
 
 $home_link = <<<HOME
@@ -177,6 +175,8 @@ foreach($userVars as $u_key => $u_value) {
         if (preg_match('/^[aeiou]/i', $NameChar)) {$NameChar = "n " . $NameChar;} else {$NameChar = " " . $NameChar;}
 
         $pageNameDir = "add/" . $l_key . "/all/" . str_replace( " ", "-", $name) . ".html";
+
+        $donger = $dongers[array_rand($dongers)];
 
         $i_name            = $linePos[$l_key]["pos"];
         $i_Name            = ucwords($i_name);
@@ -210,6 +210,7 @@ var regChar = $regChar
 $logo
 <h2>Add A$NameChar To The $i_Name Of Each Line</h2>
 $form
+<div id="copied-popup" class="invisible">Copied to clipboard &nbsp;$donger </div>
 $home_link
 </div>
 </body>
