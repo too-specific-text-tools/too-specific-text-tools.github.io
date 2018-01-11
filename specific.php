@@ -44,8 +44,6 @@ foreach($linePos as $l_key => $l_value) {
 
 $index_description = "text editing tools that do exactly the thing that you want";
 $Index_description = ucfirst($index_description);
-$i_name            = $linePos[$l_key]["pos"];
-$i_Name            = ucwords($i_name);
 
 // Normalise line endings to UNIX format =========================
 define('CR', "\r");          // Carriage Return: Mac
@@ -179,6 +177,9 @@ foreach($userVars as $u_key => $u_value) {
         if (preg_match('/^[aeiou]/i', $NameChar)) {$NameChar = "n " . $NameChar;} else {$NameChar = " " . $NameChar;}
 
         $pageNameDir = "add/" . $l_key . "/all/" . str_replace( " ", "-", $name) . ".html";
+
+        $i_name            = $linePos[$l_key]["pos"];
+        $i_Name            = ucwords($i_name);
 
         // Regex =========================
         $regPos  = $linePos[$l_key]["regVar"];
