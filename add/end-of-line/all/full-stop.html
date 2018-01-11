@@ -1,11 +1,20 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88375382-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88375382-4');
+</script>
 <meta name="description" content="Adds one or more full stops at the end of each line of text">
 <meta charset="utf-8">
 <meta name="author" content="Benjamin Glitsos">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="keywords" content="Add, Full Stop, PC, Form, Browser, Insert, Replace, Tool, Each Line, Every Line, Editing, Windows, Period, Find">
+<meta name="keywords" content="Browser, End Of Line, Copy, Regular Expressions, Append, Automatically, Every Line, Mac, Add, Instant, Javascript, Full Stop, Notep2d, Period">
 <link rel="stylesheet" href="https://too-specific-text-tools.github.io/tools.css" type="text/css">
 <script type="text/javascript">
 var regPos  = /$/gm;
@@ -18,9 +27,9 @@ var regChar = ".";
 <div class="centered-body">
 <h1><a href="https://too-specific-text-tools.github.io">Too Specific <span class="logo-subheading">Text Tools</span></a></h1>
 <h2>Add A Full Stop (.) To The End Of Each Line</h2>
-<form onsubmit="return false">
+<form onsubmit="Do()">
 <div class="textarea-overflow-fix"><textarea id="ioArea"></textarea></div>
-<button id="DoIt" onclick="Do()">do it</button>
+<button type="submit" id="DoIt">do it</button>
 </form>
 <div id="copied-popup" class="invisible">Copied to clipboard &nbsp;\(◕ ◡ ◕\) </div>
 <a href="https://too-specific-text-tools.github.io">&#171; Home</a>
